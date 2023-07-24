@@ -62,19 +62,33 @@
 
 //Constructor Function vs. Class Syntax
 // Constructor Function
-function PersonConstructor(name, age) {
+// function PersonConstructor(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// const person1 = new PersonConstructor('riya', 30);
+
+// // Class Syntax
+// class PersonClass {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+
+// const person2 = new PersonClass('rohit', 25);
+
+
+
+//Constructor Function Scope:
+function Person(name) {
   this.name = name;
-  this.age = age;
+  console.log(this); 
+
 }
 
-const person1 = new PersonConstructor('riya', 30);
-
-// Class Syntax
-class PersonClass {
-  constructor(name, age) {
-    this.name = name;
-    this.age = age;
-  }
-}
-
-const person2 = new PersonClass('rohit', 25);
+const person = Person('riya'); 
+console.log(person); // undefined
+console.log(window.name); 
+const person2= new Person("rohit")
