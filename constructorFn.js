@@ -49,14 +49,32 @@
 
 
 //ouput base questions
-function Car() {
-    this.make = "Toyota";
+// function Car() {
+//     this.make = "Toyota";
+//   }
+  
+//   Car.prototype.model = "Camry";
+  
+//   let car1 = new Car();
+//   let car2 = new Car();
+  
+//   console.log(car1.model);
+
+//Constructor Function vs. Class Syntax
+// Constructor Function
+function PersonConstructor(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+const person1 = new PersonConstructor('riya', 30);
+
+// Class Syntax
+class PersonClass {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
   }
-  
-  Car.prototype.model = "Camry";
-  
-  let car1 = new Car();
-  let car2 = new Car();
-  
-  console.log(car1.model);
-  console.log(car2.make);
+}
+
+const person2 = new PersonClass('rohit', 25);
