@@ -94,17 +94,28 @@
 // const person2= new Person("rohit")
 
 //Instance Properties vs. Prototype Properties
-function Counter() {
-  this.count = 0; 
-}
+// function Counter() {
+//   this.count = 0; 
+// }
 
-Counter.prototype.increment = function () {
-  this.count++;
+// Counter.prototype.increment = function () {
+//   this.count++;
+// };
+
+// const counter1 = new Counter();
+// const counter2 = new Counter();
+
+// counter1.increment();
+// console.log(counter1.count); //1
+// console.log(counter2.count); 
+
+//output base qustion
+const person = {
+  name: "riya",
+  sayHello: function() {
+    console.log("Hello, " + this.name);
+  }
 };
 
-const counter1 = new Counter();
-const counter2 = new Counter();
-
-counter1.increment();
-console.log(counter1.count); //1
-console.log(counter2.count); 
+const helloFunction = person.sayHello;
+helloFunction();
