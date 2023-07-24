@@ -121,8 +121,21 @@
 // helloFunction();
 
 //few different output base question
-const result = 1 / "hello";
-console.log(result === result); //false
+// const result = 1 / "hello";
+// console.log(result === result); //false
 
-console.log(3 == "3");
-console.log(3 === "3");
+// console.log(3 == "3");
+// console.log(3 === "3");
+
+// "this" Binding
+const obj = {
+  value: 42,
+  getValue: function() {
+    return this.value;
+  }
+};
+
+const getValue = obj.getValue;
+const anotherObj = { value: 100, getValue };
+
+console.log(anotherObj.getValue());
