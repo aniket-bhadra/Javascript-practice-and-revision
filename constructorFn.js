@@ -110,12 +110,19 @@
 // console.log(counter2.count); 
 
 //output base qustion
-const person = {
-  name: "riya",
-  sayHello: function() {
-    console.log("Hello, " + this.name);
-  }
-};
+// const person = {
+//   name: "riya",
+//   sayHello: function() {
+//     console.log("Hello, " + this.name);
+//   }
+// };
 
-const helloFunction = person.sayHello;
-helloFunction();
+// const helloFunction = person.sayHello;
+// helloFunction();
+
+//few different output base question
+const result = 1 / "hello";
+console.log(result === result); //false
+
+console.log(3 == "3");
+console.log(3 === "3");
