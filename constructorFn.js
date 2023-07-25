@@ -128,14 +128,41 @@
 // console.log(3 === "3");
 
 // "this" Binding
-const obj = {
-  value: 42,
-  getValue: function() {
-    return this.value;
-  }
-};
+// const obj = {
+//   value: 42,
+//   getValue: function() {
+//     return this.value;
+//   }
+// };
 
-const getValue = obj.getValue;
-const anotherObj = { value: 100, getValue };
+// const getValue = obj.getValue;
+// const anotherObj = { value: 100, getValue };
 
-console.log(anotherObj.getValue());
+// console.log(anotherObj.getValue());
+
+
+// function foo(a, b) {
+//   console.log(a);
+//   console.log(b);
+// }
+
+// const arr = [1, 2];
+// foo(...arr);
+
+
+// const arr = [1, 2, 3];
+
+// arr[10] = 10;
+
+// console.log(arr);
+
+
+function* generatorFunc() {
+  yield 1;
+  yield 2;
+  yield 3;
+  return 4;
+}
+
+const generator = generatorFunc();
+console.log([...generator]);
