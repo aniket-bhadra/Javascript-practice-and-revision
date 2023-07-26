@@ -157,12 +157,33 @@
 // console.log(arr);
 
 
-function* generatorFunc() {
-  yield 1;
-  yield 2;
-  yield 3;
-  return 4;
+//function* generatorFunc() {
+//  yield 1;
+//  yield 2;
+//  yield 3;
+//  return 4;
+//}
+
+//const generator = generatorFunc();
+//console.log([...generator]);
+
+
+//testing 
+
+
+
+//function Playlist(name, tracks) {
+  this.name = name;
+  this.tracks = tracks;
+  return this;
 }
 
-const generator = generatorFunc();
-console.log([...generator]);
+Playlist.prototype.getTrackCount = function() {
+  return this.tracks.length;
+};
+
+// Example usage:
+const playlist = new Playlist("My Playlist", ["Song 1", "Song 2", "Song 3"]);
+console.log(playlist.getTrackCount()); 
+console.log(playlist)
+console.log(new Playlist)
