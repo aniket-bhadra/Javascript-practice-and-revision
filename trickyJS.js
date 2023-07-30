@@ -83,5 +83,11 @@ function Persion(name){
     return 'World';
   };
   
+  console.log(Persion.someMethod())
+  console.log(Persion.someProperty)
   
+  const jon = new Persion("jon")
+  console.log(jon.name)
+  console.log(jon.walk())
+  console.log(jon.sharedVariable)  
   
