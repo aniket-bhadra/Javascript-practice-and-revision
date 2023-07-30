@@ -47,17 +47,41 @@
 //   console.log(MathUtils.subtract(10, 4)); 
 
 
-function MathUtils() {}
+// function MathUtils() {}
 
-MathUtils.add = function(a, b) {
-  return a + b;
-};
+// MathUtils.add = function(a, b) {
+//   return a + b;
+// };
 
-MathUtils.subtract = function(a, b) {
-  return a - b;
-};
+// MathUtils.subtract = function(a, b) {
+//   return a - b;
+// };
 
-console.log(MathUtils.add(5, 3)); 
-console.log(MathUtils.subtract(10, 4));
+// console.log(MathUtils.add(5, 3)); 
+// console.log(MathUtils.subtract(10, 4));
 
+
+function Persion(name){
+    //private varible and methods restrcited to this function
+    let flag = true
+    function PrintingFlag(){
+      console.log(flag);
+    }
+    //instance specfice properties
+    this.name = name;
+  }
+  //methods and properties shared by all the instances
+  Persion.prototype.walk=() => {
+    console.log("walking")
+  }
+  
+  Persion.prototype.sharedVariable = 'shared among all instances'
+  
+  //utilizing all functions are js are objects
+  Persion.someProperty = 'Hello';
+  Persion.someMethod = function() {
+    return 'World';
+  };
+  
+  
   
