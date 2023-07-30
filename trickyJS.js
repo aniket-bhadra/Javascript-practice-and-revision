@@ -18,3 +18,15 @@
 //       console.log(i);
 //     }, 1000);
 //   }
+
+const obj = {
+    value: 42,
+    getValue: function() {
+      return this.value;
+    }
+  };
+  
+  const getValue = obj.getValue;
+  const anotherObj = { value: 100, getValue };
+  
+  console.log(anotherObj.getValue());
