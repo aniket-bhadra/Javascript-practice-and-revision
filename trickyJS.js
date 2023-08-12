@@ -83,11 +83,25 @@ function Persion(name){
     return 'World';
   };
   
-  console.log(Persion.someMethod())
-  console.log(Persion.someProperty)
+ // console.log(Persion.someMethod())
+  //console.log(Persion.someProperty)
   
-  const jon = new Persion("jon")
-  console.log(jon.name)
-  console.log(jon.walk())
-  console.log(jon.sharedVariable)  
+  //const jon = new Persion("jon")
+  ///console.log(jon.name)
+  //console.log(jon.walk())
+  //console.log(jon.sharedVariable)  
+  
+  
+  // function hello() {
+//   console.log("age");
+// }
+// hello.prototype.myVarible= "hello"
+// const a = new hello()
+// console.log(a)
+
+const someObject = { prop: "Some property" };
+console.log(someObject);
+const newPrototype = { foo: "bar" };
+Object.setPrototypeOf(someObject, newPrototype);
+console.log(someObject)
   
