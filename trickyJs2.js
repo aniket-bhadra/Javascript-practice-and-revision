@@ -56,3 +56,34 @@ console.log('finished');
 // finished
 // value is 25
 
+
+
+function greet(person) {
+  if (person === { name: "rio" }) {
+    console.log("Hello, rio!");
+  } else {
+    console.log("Hello, Stranger!");
+  }
+}
+greet({ name: "rio" });
+
+function greet(person) {
+  if (person == { name: "rio" }) {
+    console.log("Hello, rio!");
+  } else {
+    console.log("Hello, Stranger!");
+  }
+}
+greet({ name: "rio" });
+
+
+
+let x = 1;
+if (function f() {}) {
+  x += typeof f;
+}
+console.log(x);
+
+
+console.log([] + []);
+
