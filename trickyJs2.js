@@ -87,3 +87,32 @@ console.log(x);
 
 console.log([] + []);
 
+
+
+
+
+
+
+
+
+
+console.log('script start');
+
+// function hello() {
+//   console.log('hello');
+//   return new Promise((resolve, reject)=> {
+//     reject("error")
+//   })
+// }
+
+// async function testingBehavior() {
+//   try {
+//     await hello();
+//   } catch (error) {
+//     console.log(error);
+//   }
+// }
+// testingBehavior();
+// console.log('script end');
+
+
