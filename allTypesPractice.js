@@ -13,3 +13,36 @@ testing2();
 console.log('end script');
 
 
+
+
+
+// Module 1
+var Module1 = (function () {
+    var privateVar = "Module 1";
+
+    function getPrivateVar() {
+        return privateVar;
+    }
+
+    return {
+        getPrivateVar: getPrivateVar,
+    };
+})();
+
+// Module 2
+var Module2 = (function () {
+    var privateVar = "Module 2";
+
+    function getPrivateVar() {
+        return privateVar;
+    }
+
+    return {
+        getPrivateVar: getPrivateVar,
+    };
+})();
+
+console.log(Module1.getPrivateVar()); 
+console.log(Module2.getPrivateVar()); 
+
+
