@@ -48,16 +48,35 @@
 
 
 
-const my3 = () => 'my3';
-function my1() {
-  console.log('my1');
-}
-const my2 = function () {
-  console.log('my2');
+// const my3 = () => 'my3';
+// function my1() {
+//   console.log('my1');
+// }
+// const my2 = function () {
+//   console.log('my2');
+// };
+// console.log(my1.prototype); //{}
+// console.log(my3.prototype); //undefined
+// console.log(my2.prototype); //{}
+
+
+const errorFunction = () => {
+  // throw new Error('something went wrong!!!!');
+  setTimeout(() => {
+    throw new Error('somethng went wrong!!!');
+  },0);
 };
-console.log(my1.prototype); //{}
-console.log(my3.prototype); //undefined
-console.log(my2.prototype); //{}
-
-
+console.log('start script execution');
+async function testingFlow() {
+  try {
+    await errorFunction();
+    console.log('after errorFunction !');
+  } catch (error) {
+    console.log(error);
+  } finally {
+    console.log('inside finally');
+  }
+}
+testingFlow();
+console.log('end script execution');
 
