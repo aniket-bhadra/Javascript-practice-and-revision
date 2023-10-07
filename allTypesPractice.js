@@ -80,3 +80,9 @@ async function testingFlow() {
 testingFlow();
 console.log('end script execution');
 
+let x = 1;
+if (function f() {}) {
+  x += typeof f;
+}
+console.log(x);
+
