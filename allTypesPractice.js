@@ -127,3 +127,17 @@
   console.log(y);
 })();
 
+
+
+var outsideVar = "I'm outside the IIFE";
+
+(function () {
+    var insideVar = "I'm inside the IIFE";
+
+    console.log(outsideVar); 
+    console.log(insideVar);  
+})();
+
+console.log(outsideVar); 
+console.log(typeof insideVar); 
+
