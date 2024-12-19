@@ -173,3 +173,21 @@ const dog = new Dog('Max', 'Golden Retriever');
 dog.speak();
 
 
+
+
+function createFunctions() {
+  let funcs = [];
+  for (let i = 0; i < 3; i++) {
+    funcs.push(function() {
+      return i;
+    });
+  }
+  return funcs;
+}
+
+const functions = createFunctions();
+console.log(functions[0]()); // 0
+console.log(functions[1]()); // 1
+console.log(functions[2]()); // 2
+
+
