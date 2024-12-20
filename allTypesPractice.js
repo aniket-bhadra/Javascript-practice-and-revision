@@ -128,7 +128,6 @@
 })();
 
 
-
 var outsideVar = "I'm outside the IIFE";
 
 (function () {
@@ -138,15 +137,10 @@ var outsideVar = "I'm outside the IIFE";
     console.log(insideVar);  
 })();
 
-console.log(outsideVar); 
-console.log(typeof insideVar); 
+//console.log(outsideVar); 
+//console.log(typeof insideVar); 
 
-
-
-
-
-
-
+///////////////////////
 
 
 
@@ -170,7 +164,7 @@ class Dog extends Animal {
 }
 
 const dog = new Dog('Max', 'Golden Retriever');
-dog.speak();
+//dog.speak();
 
 
 
@@ -185,9 +179,38 @@ function createFunctions() {
   return funcs;
 }
 
-const functions = createFunctions();
-console.log(functions[0]()); // 0
-console.log(functions[1]()); // 1
-console.log(functions[2]()); // 2
+//const functions = createFunctions();
+//console.log(functions[0]()); // 0
+//console.log(functions[1]()); // 1
+//console.log(functions[2]()); // 2
 
+///////////////////////////////
 
+// 1. Closure 
+let outer = 10;
+function closureExample() {
+  let inner = 20;
+  return function() {
+    console.log(outer, inner);
+  };
+}
+const closureFunc = closureExample();
+closureFunc();  
+outer = 30;
+closureFunc();  
+
+// 2. Hoisting with let
+console.log(a);
+let a = 5;
+
+// 3. Hoisting with function declarations
+console.log(b());
+function b() {
+  return "Hoisted!";
+}
+
+// 4. `let` vs `var` and temporal dead zone
+console.log(c);
+var c = 5;
+console.log(d);
+let d = 10;
