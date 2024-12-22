@@ -34,15 +34,20 @@
 //   });
 // }, 0);
 // console.log("D");
+//console.log("E");
 
-console.log("A");
-setTimeout(function() {
-  console.log("B");
-}, 0);
-Promise.resolve().then(function() {
-  console.log("C");
-  setTimeout(function() {
-    console.log("D");
-  }, 0);
-});
-console.log("E");
+//////////////////////////////
+//setInterval(() => console.log('Tick'), 1000);
+//setTimeout(() => clearInterval(this), 5000);
+
+//setTimeout(() => console.log('A'), 0);
+//Promise.resolve().then(() => console.log('B'));
+
+
+setInterval(() => console.log('Hello'), 1000);
+setTimeout(() => console.log('World'), 3000);
+
+console.log(1);
+setTimeout(() => console.log(2), 0);
+setTimeout(() => console.log(3), 0);
+console.log(4);
