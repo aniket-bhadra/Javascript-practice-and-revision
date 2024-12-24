@@ -194,23 +194,62 @@ function closureExample() {
     console.log(outer, inner);
   };
 }
-const closureFunc = closureExample();
-closureFunc();  
+//const closureFunc = closureExample();
+//closureFunc();  
 outer = 30;
-closureFunc();  
+//closureFunc();  
 
 // 2. Hoisting with let
-console.log(a);
+//console.log(a);
 let a = 5;
 
 // 3. Hoisting with function declarations
-console.log(b());
+//console.log(b());
 function b() {
   return "Hoisted!";
 }
 
 // 4. `let` vs `var` and temporal dead zone
-console.log(c);
+//console.log(c);
 var c = 5;
-console.log(d);
+//console.log(d);
 let d = 10;
+
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////
+class MyClass {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+
+  greet() {
+    console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+  }
+}
+
+class SubClass extends MyClass {
+  constructor(name, age, profession) {
+    super(name, age);
+    this.profession = profession;
+  }
+
+  greet() {
+    super.greet();
+    console.log(`I am a ${this.profession}.`);
+  }
+}
+
+const person = new SubClass("Alice", 30, "Engineer");
+person.greet();
+
