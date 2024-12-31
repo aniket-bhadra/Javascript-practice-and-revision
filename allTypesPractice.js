@@ -264,3 +264,20 @@ console.log([] == ![] == {});
 console.log(+"10" - 1 == 9);
 console.log([1, 2] == [1, 2]);
 
+///////////////////////////
+let map = new Map();
+let obj = { key: 'value' };
+map.set(obj, 'Hello');
+
+console.log(map.get(obj));
+obj = null;
+console.log(map.get(obj));
+/////////////////
+var obj = {};
+Object.defineProperty(obj, 'x', {
+  value: 10,
+  writable: false
+});
+
+obj.x = 20;
+console.log(obj.x);
